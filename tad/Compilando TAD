@@ -1,0 +1,4 @@
+Na hora de compilar
+1°= compilar a implementação com um "-c" exemplo (gcc -c implementação.c)
+2° = compilar o programa onde vc vai usa o TAD usando o ".o" gerado pela compilação anterior exemplo (gcc teste.c implementação.o -o teste)
+se vc mudar a implentação vai precisar voltar para o inicio 

@@ -1,0 +1,3 @@
+//especificação
+
+void hello();

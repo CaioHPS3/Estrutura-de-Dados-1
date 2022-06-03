@@ -1,0 +1,41 @@
+#include "atividade.h"
+#include <stdio.h>
+
+int main(){
+    TStaticList* listas[3] = {TStaticList_create(), TStaticList_create(), TStaticList_create()};
+    
+    char x; 
+    int q=1; 
+    int num; 
+    int aux;
+
+    while (q != 0)
+    {
+        scanf("%c", &x);
+        if(x=='i'){
+            scanf("%d", &num);
+            scanf("%d", &aux);
+            TStaticList_insert(num, listas[aux]);
+        }
+        if(x=='p'){
+            scanf("%d", &aux);
+            TStaticList_print(listas[aux]);
+        }
+        if(x=='q'){
+            scanf("%d", &q);
+        }
+        if(x=='r'){
+            scanf("%d", &num);
+            scanf("%d", &aux);
+            TStaticList_remove(num, listas[aux]);
+        }
+        if(x=='c'){
+            scanf("%d", &aux);
+            scanf("%d", &num);
+            TStaticlist_concatenar(listas[aux], listas[num]);
+
+        }
+    }
+    TStaticList_destroy(listas);
+    
+}
