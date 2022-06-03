@@ -25,7 +25,8 @@ libed: \
 myapps: clean_apps \
 	$(BIN)/test_float_vector \
 	$(BIN)/test_linked_list \
-	$(BIN)/test_doubly_list
+	$(BIN)/test_doubly_list \
+	$(BIN)/main
 
 $(OBJ)/%.o: $(SRC)/%.c $(INCLUDE)/%.h
 	gcc $(FLAGS) -c $< -I $(INCLUDE) -o $@
