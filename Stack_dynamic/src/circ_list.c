@@ -47,10 +47,10 @@ void CircList_destroy(CircList **L_ref){
     while(p!=l->end){
         aux= p;
         p=p->next;
-        CircList_destroy(&aux);
+        CircNode_destroy(&aux);
     }
     //depois desalocar o último nó
-    CircList_destroy(&p);
+    CircNode_destroy(&p);
     free(l);
     L_ref=NULL;
 }
@@ -63,7 +63,7 @@ void CircList_destroy2(CircList **L_ref){
     for(int a= 0;a<l->size;a++){
         aux= p;
         p=p->next;
-        CircList_destroy(&aux);
+        CircNode_destroy(&aux);
     }
     free(l);
     L_ref=NULL;
